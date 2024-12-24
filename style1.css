@@ -1,0 +1,79 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+/* Custom styles go below */
+
+.main2{
+    height: 100%;
+    width: 100%;
+    background-color: #B39CD0;
+    position: relative;
+}
+
+.nav2{
+    height: 80px;
+    width: 100%;
+    background: #FBEAFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: fixed; */
+}
+
+.contact_add{
+    height: 50%;
+    width: 50%;
+    background-color: snow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.title{
+    height: 50px;
+    width: 100%;
+    background-color: violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title2{
+    height: 100%;
+    width: 100%;
+    background-color: midnightblue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#name{
+    width: 250px;
+}
+
+#number{
+    width: 250px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    background-color: lightgreen;
+    margin-top: 50px;
+}
+
+.title2 h5{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: larger;
+}
