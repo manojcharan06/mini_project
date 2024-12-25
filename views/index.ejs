@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Book</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: #FBEAFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav {
+            background: #FBEAFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 80px;
+            border-bottom: black;
+        }
+
+        .nav h1 {
+            color: #845EC2;
+            font-family: Helsinki;
+            font-size: 70px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .content {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .desc {
+            height: 50px;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            margin-top: 3%;
+            justify-content: space-around;
+        }
+
+        .text1 {
+            color: #000;
+            font-family: Alata;
+            font-size: 15px;
+        }
+
+        .text2 {
+            display: flex;
+            height: 100%;
+            width: 100px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #search {
+            height: 25px;
+            width: 25px;
+        }
+
+        #search:hover {
+            background-color: snow;
+        }
+
+        #add {
+            height: 25px;
+            width: 25px;
+        }
+
+        #add:hover {
+            background-color: snow;
+        }
+
+        .content .list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2vh;
+        }
+
+        .card {
+            width: 550px;
+            height: 90px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 20px;
+        }
+
+        .card1 {
+            height: 90%;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #9e9e9e;
+        }
+
+        .card2 {
+            height: 100%;
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card2 h2 {
+            color: #845EC2;
+            font-family: Alata;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+        .card2 h6 {
+            color: #B39CD0;
+            font-family: Alata;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .card3 {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .card3 img {
+            height: 30px;
+            width: 30px;
+            margin-left: 13px;
+        }
+
+        #edit, #delete{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <h1>Phone Book</h1>
+    </div>
+    <div class="content">
+        <div class="desc">
+            <div class="text1">
+                <h3>Contact</h3>
+            </div>
+            <div class="text2">
+                <img id="search" src="./icons/1.png" alt="">
+                <a href="/add"><img id="add" src="./icons/5.png" alt=""></a>
+            </div>
+        </div>
+
+
+
+        <div class="list">
+            <% dets.forEach((dets) => { %>
+            <div class="card">
+                <div class="card1">
+
+                </div>
+                <div class="card2">
+                    <h2><%= dets.name %></h2>
+                    <h6><%= dets.phone %></h6>
+                </div>
+                <div class="card3">
+                    <img id="edit" src="./icons/2.png" alt="">
+                    <img id="delete" src="./icons/3.png" alt="">
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

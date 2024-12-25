@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Book</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset CSS */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Custom styles go below */
+
+        .main2 {
+            height: 100%;
+            width: 100%;
+            background-color: #B39CD0;
+            position: relative;
+        }
+
+        .nav2 {
+            height: 80px;
+            width: 100%;
+            background: #FBEAFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* position: fixed; */
+        }
+
+        .contact_add {
+            height: 50%;
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .contact_add h2{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #submit {
+            width: 100px;
+            height: 30px;
+            background-color: #00C9A7;
+            border: none;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            cursor: pointer;
+        }
+
+        form input[type="text"] {
+            background: #D9D9D9;
+            border: none;
+            padding: 8px 30px;
+        }
+
+        form label {
+            color: #000;
+            font-family: Alata;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main2">
+        <div class="nav2">
+            <h1>Phone Book</h1>
+        </div>
+        <div class="contact_add">
+                <h2>Add Contact</h2>
+            <form action="/add_contact" method="POST">
+                <!-- <input type="file" name="profile" id="profile"> -->
+                <label for="name">Enter name :</label>
+                <input id="name" type="text" placeholder="Enter Name" name="name" required>
+                <label for="number">Enter your Number</label>
+                <input id="number" type="text" placeholder="Contact" name="Phone" required>
+                <input type="submit" id="submit" value="Add">
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
