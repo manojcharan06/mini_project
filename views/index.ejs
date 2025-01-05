@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Book</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         * {
             padding: 0;
@@ -90,12 +89,13 @@
             background-color: snow;
         }
 
-        .content .list{
+        .content .list {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 2vh;
+            overflow: scroll;
         }
 
         .card {
@@ -156,7 +156,8 @@
             margin-left: 13px;
         }
 
-        #edit, #delete{
+        #edit,
+        #delete {
             cursor: pointer;
         }
     </style>
@@ -172,33 +173,33 @@
                 <h3>Contact</h3>
             </div>
             <div class="text2">
-                <img id="search" src="./icons/1.png" alt="">
+                <a href="#"><img id="search" id="search" src="./icons/1.png" alt=""></a>
                 <a href="/add"><img id="add" src="./icons/5.png" alt=""></a>
             </div>
         </div>
 
-
-
         <div class="list">
-            <% dets.forEach((dets) => { %>
-            <div class="card">
-                <div class="card1">
+            <% dets.forEach((det)=> { %>
+                <div class="card">
+                    <div class="card1">
 
+                    </div>
+                    <div class="card2">
+                        <h2>
+                            <%= det.name %>
+                        </h2>
+                        <h6>
+                            <%= det.phone %>
+                        </h6>
+                    </div>
+                    <div class="card3">
+                        <a href="/update?nameToUpate=<%= det.name %>&phoneToUpdate=<%= det.phone %>"><img id="edit" class="edit" src="./icons/2.png" alt=""></a>
+                        <img id="delete" src="./icons/3.png" alt="">
+                    </div>
                 </div>
-                <div class="card2">
-                    <h2><%= dets.name %></h2>
-                    <h6><%= dets.phone %></h6>
-                </div>
-                <div class="card3">
-                    <img id="edit" src="./icons/2.png" alt="">
-                    <img id="delete" src="./icons/3.png" alt="">
-                </div>
-            </div>
-            <% }) %>
+                <% }) %>
         </div>
     </div>
-
-
 
 </body>
 
